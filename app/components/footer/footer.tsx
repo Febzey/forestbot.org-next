@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="text-white py-8 backdrop-blur">
@@ -7,10 +9,7 @@ const Footer = () => {
         </p>
         <ul className="flex flex-wrap justify-center lg:justify-end space-x-4 text-sm">
           <li>
-            <a href="#">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#">Terms of Service</a>
+            <Link href="/privacy">Privacy Policy</Link>
           </li>
           <li>
             <a href="#">Contact Us</a>
