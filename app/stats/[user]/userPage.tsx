@@ -18,7 +18,7 @@ interface UserParams {
 
 async function getUUIDFromUsername(user: string): Promise<uuidData | void> {
     try {
-        const res = await fetch(`https://api.mojang.com/users/profiles/minecraft/${user}`)
+        const res = await fetch(`https://api.mojang.com/users/profiles/minecraft/${user}`, { cache: "no-store"})
         if (!res.ok) {
             return
         }

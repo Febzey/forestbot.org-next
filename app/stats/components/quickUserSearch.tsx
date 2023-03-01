@@ -1,17 +1,8 @@
 'use client';
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 export default function QuickUserSearch() {
-
     const [userToSearch, setUserToSearch] = useState("");
-    const router = useRouter();
-
-    const handleSubmit = () => {
-        console.log(userToSearch)
-        router.push(`/stats/${userToSearch}`)
-        return;
-    };
-
     return (
         <div className="lg:w-[90%] w-full h-[50vh] mx-auto rounded p-8">
             <div className="w-full h-full p-4">
@@ -32,9 +23,9 @@ export default function QuickUserSearch() {
                                 onChange={(event) => setUserToSearch(event.target.value)}
                                 spellCheck={false}
                             />
-                            <button onClick={() => handleSubmit()} className="w-full lg:w-auto p-6 border-b-8 border-b-emerald-600 hover:bg-opacity-60 duration-150 bg-emerald-500 text-white h-12 items-center flex justify-center">
+                            <Link href={`/stats/${userToSearch}`} prefetch={false} className="w-full lg:w-auto p-6 border-b-8 border-b-emerald-600 hover:bg-opacity-60 duration-150 bg-emerald-500 text-white h-12 items-center flex justify-center">
                                 Search
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
