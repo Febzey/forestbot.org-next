@@ -82,7 +82,19 @@ const commandList = [
     {
         cmd: "!sleep",
         desc: "If a bed is close, ForestBot will sleep."
-    }
+    },
+    {
+        cmd: "!firstmessage",
+        desc: "View yours or another users first publicly sent message."
+    },
+    {
+        cmd: "!lastmessage",
+        desc: "View yours or another users last publicly sent message."
+    },
+    {
+        cmd: "!wordcount <user> <word>",
+        desc: "See how many times a user has said a specific word."
+    },
 
 ];
 
