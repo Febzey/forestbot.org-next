@@ -17,7 +17,7 @@ const nextConfig = {
         },
         {
           source: "/group",
-          destination: 'https://discord.org/wKRsFSm8bM',
+          destination: 'https://discord.gg/wKRsFSm8bM',
           permanent: false,
           basePath: false
         },
