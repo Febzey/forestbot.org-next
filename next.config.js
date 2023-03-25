@@ -7,6 +7,16 @@ const nextConfig = {
     images: {
       domains: ['crafatar.com'],
     },
+    async redirects() {
+      return [
+        {
+          source: "/discord",
+          destination: 'https://api.forestbot.org/discord',
+          permanent: false,
+          basePath: false
+        },
+      ]
+    }
   }
   
   module.exports = nextConfig
