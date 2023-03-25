@@ -15,6 +15,12 @@ const nextConfig = {
           permanent: false,
           basePath: false
         },
+        {
+          source: "/group",
+          destination: 'https://discord.org/wKRsFSm8bM',
+          permanent: false,
+          basePath: false
+        },
       ]
     }
   }
