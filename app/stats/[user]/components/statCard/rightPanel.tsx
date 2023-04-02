@@ -10,7 +10,7 @@ interface RightPanelArgs {
 async function getMessages(user: string, mc_server: string): Promise<UserMessages | void> {
     const response = await fetch(`https://api.forestbot.org/messages/${user}/${mc_server}/40/last`, { cache: "no-store"});
     if (!response.ok) return
-    return response.json();
+    return (await response.json()).data;
 }
 
 async function getAdvancements(user: string, mc_server: string): Promise<Advancement|void> {
